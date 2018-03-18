@@ -59,6 +59,20 @@ function addData(data, s) {
 		addData(data, elem);
 	});
 	
-	
+	d3.select("#boi")
+		//This line is necessary cuz otherwise the
+		//data will be attached to the svg frame.
+		//We want to attach data to the "imaginary"
+		//circles
+		.selectAll("circle")
+		.data(data).enter()
+		.append("circle")
+		.attr("r", 5)
+		//stretch out the data points so they're more
+		//distinct
+		.attr("cx", d => ((d.year*35) / 2016)*500 - 17090 )
+		.attr("cy", d => 500 - (((d.bmi*7)/27.4750575645)*500 - 3050) )
+		.attr("stroke", "black")
+		.attr("fill", "BlanchedAlmond");
 })();
 
