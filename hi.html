@@ -6,14 +6,27 @@
 
 <body>
 	<h1>Average BMI versus Year</h1>
+	<p>Each point represents a sample of the population</p>
 	<svg xmlns="http://www.w3.org/2000/svg"
 		width="500" height="500" id="boi">
 		No canvas :(
-		<text x="0" y="50">Average BMI</text>
-		<text x="450" y="495">Year</text>
-		<line x1="0" y1="500" x2="450" y2="500" stroke="black" />
-		<line x1="0" y1="500" x2="0" y2="50" stroke="black" />
+		<text x="20" y="50">Average BMI</text>
+		<text x="250" y="495">Year</text>
+		<text x="30" y="495">1975</text>
+		<text x="440" y="495">2016</text>
+		<text x="0" y="455" transform="rotate(270 0 455) translate(-10 15)">24</text>
+		<text x="0" y="60" transform="rotate(270 0 60) translate(-10 15)">27</text>
+		<!-- axes -->
+		<line x1="0" y1="470" x2="480" y2="470" stroke="black" />
+		<line x1="30" y1="500" x2="30" y2="50" stroke="black" />
+		<!-- x ticks -->
+		<line x1="50" y1="480" x2="50" y2="470" stroke="black" />
+		<line x1="460" y1="480" x2="460" y2="470" stroke="black" />
+		<!-- y ticks -->
+		<line x1="15" y1="455" x2="30" y2="455" stroke="black" />
+		<line x1="15" y1="60" x2="30" y2="60" stroke="black" />
 	</svg>
+	<p>Source: WHO</p>
 
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="wee.js"></script>

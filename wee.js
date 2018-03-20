@@ -70,8 +70,17 @@ function addData(data, s) {
 		.attr("r", 5)
 		//stretch out the data points so they're more
 		//distinct
-		.attr("cx", d => ((d.year*35) / 2016)*500 - 17090 )
-		.attr("cy", d => 500 - (((d.bmi*7)/27.4750575645)*500 - 3050) )
+		.attr("cx", d => {
+			let x = (d.year*10) - 19700;
+			console.log(x);
+			return x;
+		})
+		.attr("cy", d => {
+			let y = 500 - ((d.bmi*120) - 2850);
+			console.log(y);
+			return y;
+		})
+		
 		.attr("stroke", "black")
 		.attr("fill", "BlanchedAlmond");
 })();
